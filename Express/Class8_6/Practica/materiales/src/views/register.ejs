@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Formulario de creación'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/headerNavbar') %>
+	<!-- /Header -->
+
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Formulario de Registro</h2>
+			</div>
+		</div>
+		<div class="col-12">
+			<form action="/profile" method="POST" enctype='multipart/form-data'>
+				<div class="row product-detail">
+					<div class="col-12 col-md-6">
+						<label for="name" class="form-label">Nombre:</label>
+						<input type="text" id="name" name="name" placeholder="Ej: Don Pepe" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="lastName" class="form-label">Apellido:</label>
+						<input type="text" id="lastName" name="lastName" placeholder="Ej: Sarasa" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="email" class="form-label">Email:</label>
+						<input type="text" id="email" name="email" placeholder="Ej: JuanPepe@hotmail.com" class="form-input">
+                    </div>
+                    <div class="col-12 col-md-6">
+						<label for="pass" class="form-label">Password:</label>
+						<input type="password" id="pass" name="pass" placeholder="Ej: secreto123" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="NOSE" class="form-label">Repetir Password:</label>
+						<input type="text" id="NOSE" name="NOSE" placeholder="Ej: zzzz" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="avatar" class="form-label">Fotito Avatar:</label>
+						<input type="file" id="avatar" name="avatar" placeholder="fotito.jpg" class="form-input">
+					</div>
+					<div class="col-12">
+						<button type="submit" class="buy-now-button">Registrar</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+	<!-- /todos los productos -->
+
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>

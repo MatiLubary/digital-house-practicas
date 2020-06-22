@@ -1,0 +1,54 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+
+.header {
+    font-size: 32px;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 50px;
+    margin-left: 15px;
+    
+}
+
+.a {
+    border-right: 1px solid black;
+    width: 150px;
+    /* display: inline-block; */
+    height: 1000px;
+    float: left;
+    margin-left: 15px;
+}
+
+.wolo{
+    padding-left: 25px;
+    line-height: 25px;
+}
+
+
+.c {
+    /* display: inline-block; */
+    float: left;
+    padding-left: 20px;
+}
+
+.topSpace {
+    padding-top: 15px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  button {
+      border-radius: 6px;
+      border: 1px solid gold;
+      width: 120px;
+      padding: 12px;
+  }

@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("images/bg-body.png");
+}
+
+input:hover{
+    background-color: lightblue;
+}
+
+
+.logo,
+.toggle-nav,
+.main-nav {
+    display: block;
+}
+
+.logo {
+    border-radius: 100%;
+    margin: 0 auto
+}
+
+header {
+    display: block;
+    text-align: center;
+}
+
+.main-header {
+    text-transform: capitalize;
+}
+
+.toggle-nav {
+    color: black;
+    padding: 10px;
+}
+
+.banner{
+    display: none;
+}
+/* @media (min-width: 768px){
+.banner {
+
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }
+} */
+
+
+.vip-products {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.container {
+
+}
+
+.main-nav li {
+display: inline-block;
+
+}
+.main-footer {
+    display: inline-block;
+    background-color: red;
+    }
+
+    .special {
+        position: absolute;
+        top: 0px;   
+        right: 20px;
+    }
+    .photo-container .zoom {
+        position: absolute;
+        top: 230px;
+        text-decoration: none;
+        color: white;
+        background-color: darkslategrey;
+        background-color: rgba(0, 0, 0, 40%);
+        display: block;
+        width: 100%;
+        line-height: 80px;
+        text-align: center;
+        font-size: 2em;
+    }
+    .photo-container .photo {
+        display: block;
+        width: 100%;
+    }
+    .photo-container {
+        position: relative;
+    }
+    .more {
+        position: relative;
+        right: 395px;
+        text-decoration: none;
+        color: white;
+        background-color: rgb(53, 53, 54);
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    h2 {
+        position: relative;
+        text-align: left;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    p {
+        position: relative;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+ul {
+    list-style-type: none;  
+
+  }
+
+.main-nav
+  a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(46, 46, 46);
+    margin: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.main-footer
+  a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+
+}
+
+
+  
