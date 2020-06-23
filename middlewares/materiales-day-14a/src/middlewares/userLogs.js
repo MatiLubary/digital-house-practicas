@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const middLogger = function (req, res, next) {
+module.exports = function (req, res, next) {
     let url = req.url;
     let log = 'El usuario ingreso a la ruta' + url + "\n";
 
@@ -10,5 +10,3 @@ const middLogger = function (req, res, next) {
 
     next()
 }
-
-module.exports = middLogger;

@@ -19,12 +19,12 @@ app.use(cookieParser());
 app.set('view engine', 'ejs');
 app.set('views', './src/views'); // Seteo de la ubicación de la carpeta "views"
 
-
+var middLogger = require('./middlewares/userLogs')
 
 // ************ WRITE YOUR CODE FROM HERE ************
 // ************ Route System require and use() ************
 const mainRouter = require('./routes/main.js');
-app.use('/', mainRouter);
+app.use('/', middLogger, mainRouter);
 
 
 
