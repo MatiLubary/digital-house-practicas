@@ -1,14 +1,14 @@
 const fs = require('fs');
 
-const logger = function (req, res, next) {
+const middLogger = function (req, res, next) {
     let url = req.url;
-    let log = 'El usuario ingreso a la ruta' + url;
+    let log = 'El usuario ingreso a la ruta' + url + "\n";
 
     console.log(log);
 
-    fs.appendFileSync("logs.txt", log)
+    fs.appendFileSync("./logs/userLogs.txt", log)
 
     next()
 }
 
-module.exports = logger;
+module.exports = middLogger;

@@ -19,9 +19,9 @@ const mainController = require('../controllers/mainController');
 
 router.get('/', mainController.root); /* GET - home page */
 
-router.get('/services', mainController.search); /* GET - search results */
+router.get('/services', mainController.services); /* GET - search results */
 
-router.get('/services/design', mainController.search); /* GET - search results */
+router.get('/services/design', mainController.design); /* GET - search results */
 
 
 module.exports = router;

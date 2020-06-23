@@ -11,11 +11,11 @@ const controller = {
     },
 
     services: (req, res) => {
-		res.render('index');
+		res.render('TBD');
     },
 
     design: (req, res) => {
-		res.render('index');
+		res.render('TBD');
     },
 
 
