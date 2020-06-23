@@ -41,7 +41,7 @@ const controller = {
 
 
 		res.render('product-edit-form', {
-			productToEdit : product
+			productToEdit : products
 		} )
 	},
 	// Update - Method to update

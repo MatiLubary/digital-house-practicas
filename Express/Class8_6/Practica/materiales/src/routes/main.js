@@ -24,6 +24,9 @@ router.get('/search', mainController.search); /* GET - search results */
 
 
 router.get('/register', mainController.register);  
+
+
+
 router.post('/profile', upload.any(), mainController.create);  
 
 module.exports = router;

@@ -7,6 +7,7 @@ const usersFilePath = path.join(__dirname, '../data/users.json');
 
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+
 // cambiar a let el toThousand
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -51,7 +52,7 @@ const controller = {
 
 		fs.writeFileSync(usersFilePath, usuariosJSON)
 
-		res.send(usuario)
+		res.render('profile', {usuario})
 	},
 
 
