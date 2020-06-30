@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: <%= color %> ;">
+<h1>Elegiste el Color: <%= color %> </h1>
+    <form>  
+    <select id="bg-color" name="bg_color">
+        <option value="red">Red</option>
+        <option value="white">White</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+      </select>
+
+      <input type="checkbox" id="saveColor" name="saveColor" value="Yes">
+        <label for="saveColor"> Remember Color</label><br>
+
+      <button>  Enviar  </button>
+
+      
+    </form>
+
+
+</body>
+</html>
