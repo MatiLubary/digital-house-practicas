@@ -19,6 +19,12 @@ router.get('/contacto', function(req, res){
   })
 })
 
+router.get('/testColor', function(req, res){
+  res.render('colorjs', {
+  accept_cookies : req.cookies.accept_cookies == 'true'  
+  })
+})
+
 
 
 router.get('/colores', function(req, res, next){
