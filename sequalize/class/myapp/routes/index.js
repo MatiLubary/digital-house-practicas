@@ -5,6 +5,7 @@ var router = express.Router();
 const db = require('../db/models')
 
 const mainController = require('../controllers/indexController');
+const { render } = require('ejs');
 
 /* GET home page. */
 router.get('/', mainController.root
@@ -40,7 +41,16 @@ router.get('/movies/detail/:id', function (req, res){
 })
 
 
-router.get('movies/edit/:id')
+router.post('movies/delete/:id', function (res, req) {
+  
+    db.Movie.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+    res.send('Deleted successfuly!')
+    
+})
 
 
 module.exports = router;

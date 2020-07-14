@@ -14,12 +14,12 @@
     <h3> Length: <%= movie.length %> </h3>
     <h3> Release Date: <%= movie.release_date %> </h3>
     
-    <a href="/products/edit/<%= movie.id %>" class="action-button edit">
-        EDITAR PRODUCTO
+    <a href="/movies/edit/<%= movie.id %>" class="action-button edit">
+        EDIT
     </a>
 
-    <form action="/products/delete/<%= movie.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-        <button type="submit" class="action-button delete">ELIMINAR</button>
+    <form action="/movies/delete/<%= movie.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+        <button type="submit" class="action-button delete">DELETE</button>
     </form>
 
 
