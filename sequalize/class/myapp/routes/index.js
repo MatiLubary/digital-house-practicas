@@ -1,5 +1,4 @@
 var express = require('express');
-const controller = require('../controllers/indexController');
 var router = express.Router();
 
 const db = require('../db/models')
@@ -13,12 +12,11 @@ router.get('/', mainController.root
 /* function(req, res, next) {
   res.render('index', { title: 'Express' });
 } */
-
 );
 
 
 router.get('/movies', function(req, res){
-  db.Movie.findAll()
+  db.peliculas.findAll()
   .then(movie => {
     res.render('movies', {movies: movie})
 
@@ -33,7 +31,7 @@ router.get('/movies', function(req, res){
 
 
 router.get('/movies/detail/:id', function (req, res){
-  db.Movie.findByPk(req.params.id)
+  db.peliculas.findByPk(req.params.id)
   .then(movie => {
     res.render('detalleMovie', {movie: movie})
   })
@@ -41,14 +39,15 @@ router.get('/movies/detail/:id', function (req, res){
 })
 
 
-router.post('movies/delete/:id', function (res, req) {
-  
-    db.Movie.destroy({
+router.delete('/delete/:id', function (req, res) {
+
+    db.peliculas.destroy({
+      
       where: {
-        id: req.params.id
+        id : req.params.id
       }
-    })
-    res.send('Deleted successfuly!')
+    });
+    res.redirect('/movies')
     
 })
 

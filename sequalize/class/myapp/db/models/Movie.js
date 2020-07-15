@@ -2,40 +2,39 @@
 /* const { DataTypes } = require("sequelize/types"); */
 
 module.exports = function (sequelize, dataTypes) {
-    let movie = sequelize.define('Movie', {
 
+
+    let alias = 'peliculas'
+    let cols = {
         id: {
-        type: dataTypes.INTEGER,
-        autoIncrement: true,
-        primaryKey: true,
-        allowNull: false
+            type: dataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
         },
-        
         title: {
-            type: dataTypes.STRING(85),
-            allowNull: true,
+            type: dataTypes.STRING
         },
         length: {
-            type: dataTypes.STRING
+            type: dataTypes.INTEGER
         },
         rating: {
             type: dataTypes.FLOAT
         },
         awards: {
-            type: dataTypes.INTEGER
-        },
-        release_date: {
             type: dataTypes.DATE
         }
 
-    }, {
-        tableName: 'movies',
-        timestamps: true,
-        underscored: true,
-        createdAt: 'created_at',
-        createdAt: 'updated_at', 
-    })
+    }
 
-    return movie
+let config = {
+    tableName : 'movies',
+    timestamps: false
+}
+
+const pelicula = sequelize.define(alias, cols, config)
+
+
+
+    return pelicula
 
 }
