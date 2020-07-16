@@ -4,24 +4,21 @@
 module.exports = function (sequelize, dataTypes) {
 
 
-    let alias = 'peliculas'
+    let alias = 'actors'
     let cols = {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        title: {
+        first_name: {
             type: dataTypes.STRING
         },
-        length: {
-            type: dataTypes.INTEGER
+        last_name: {
+            type: dataTypes.STRING
         },
         rating: {
             type: dataTypes.FLOAT
-        },
-        awards: {
-            type: dataTypes.INTEGER
         }
 
     }

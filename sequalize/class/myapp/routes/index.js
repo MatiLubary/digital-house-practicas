@@ -30,6 +30,30 @@ router.get('/movies', function(req, res){
 })
 
 
+
+router.get('/create', function (req, res){
+  res.render('createMovie')
+  })
+ /* GET - Form to create */
+
+
+
+
+router.post('/movies', function (req, res){
+  db.peliculas.create({
+    title: req.body.title,
+    rating: req.body.rating,
+    awards: req.body.awards,
+    length: req.body.length
+  })
+  res.redirect('/movies')
+}); /* POST - Store in DB */
+
+
+
+
+
+
 router.get('/movies/detail/:id', function (req, res){
   db.peliculas.findByPk(req.params.id)
   .then(movie => {
@@ -37,6 +61,30 @@ router.get('/movies/detail/:id', function (req, res){
   })
 
 })
+
+
+router.get('/edit/:id', function (req, res){
+  db.peliculas.findByPk(req.params.id)
+  .then(movie => {
+    res.render('editMovie', {movie: movie})
+  })
+}); 
+
+router.put('/edit/:id', function (req, res){
+  db.peliculas.update({
+    title: req.body.title,
+    rating: req.body.rating,
+    awards: req.body.awards,
+    length: req.body.length
+  },
+  {
+    where: {
+      id: req.params.id
+    }
+  })
+
+  res.redirect('/movies')
+} ); 
 
 
 router.delete('/delete/:id', function (req, res) {
