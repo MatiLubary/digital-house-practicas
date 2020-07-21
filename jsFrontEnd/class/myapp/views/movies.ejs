@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <% movies.forEach(movie => { %>
+        <h1> <%= movie.id %>       </h1>
+        <a href="/movies/detail/<%= movie.id %>"><h2> <%= movie.title %> </h2> </a>
+        <h3> Rating: <%= movie.rating %> </h3>
+        <h3> Awards: <%= movie.awards %> </h3>
+        <h3> Length: <%= movie.length %> </h3>
+        <h3> Release Date: <%= movie.release_date %> </h3>
+     <% }) %>
+
+<a href="/create">Crear Pelicula</a>
+</body>
+</html>
