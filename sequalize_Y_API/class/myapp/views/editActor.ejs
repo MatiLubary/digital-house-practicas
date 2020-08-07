@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <form action="/actors/edit/<%= actors.id %>?_method=PUT" method="POST">
+
+
+        <h1> <%= actors.id %></h1>
+
+
+        <h2> <label for="first_name" class="form-label">Primer Nombre:</label>
+            <input type="text" id="first_name" name="first_name" value="<%= actors.first_name %>" class="form-input"> </h2>
+              
+        <h3> <label for="last_name" class="form-label">Apellido:</label>
+            <input type="text" id="last_name" name="last_name" value="<%= actors.last_name %>" class="form-input"> </h3>
+
+        <h3> <label for="rating" class="form-label">Rating del actor:</label>
+            <input type="text" id="rating" name="rating" value="<%= actors.rating %>" class="form-input"> </h3>    
+
+
+            
+
+        <button type="submit" class="">Guardar actors</button>
+    
+    </form>
+
+
+
+
+</body>
+</html>

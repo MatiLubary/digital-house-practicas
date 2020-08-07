@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var actorsRouter = require('./routes/actors');
 
 var apiMoviesRouter = require('./routes/api/movies')
 
@@ -38,6 +39,7 @@ app.use(recordameMiddleware)
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/actors', actorsRouter);
 app.use('/api/movies', apiMoviesRouter)
 
 // catch 404 and forward to error handler

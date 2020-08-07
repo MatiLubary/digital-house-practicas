@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>   <!-- AXIOS -->
+</head>
+<body>
+    
+    <% actors.forEach(actors => { %>
+        <h1> <%= actors.id %>       </h1>
+        <a href="/actors/detail/<%= actors.id %>"><h2> <%= actors.first_name + " " + actors.last_name%> </h2> </a>
+        <h3> Rating: <%= actors.rating %> </h3>
+
+
+
+     <% }) %>
+
+
+
+<a href="/create">Crear Pelicula</a>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> <%= actors.id %>       </h1>
+    <h2> <%= actors.first_name %> </h2>
+    <h3> Rating: <%= actors.rating %> </h3>
+    
+    <a href="/actors/edit/<%= actors.id %>" class="action-button edit">
+        EDIT
+    </a>
+
+    <form action="/delete/<%= actors.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+        <button type="submit" class="action-button delete">DELETE</button>
+    </form>
+
+
+
+
+</body>
+</html>

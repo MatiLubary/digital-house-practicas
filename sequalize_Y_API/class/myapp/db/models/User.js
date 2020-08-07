@@ -1,9 +1,6 @@
-/* const { sequelize, Sequelize } = require("."); */
-/* const { DataTypes } = require("sequelize/types"); */
-
 module.exports = function (sequelize, dataTypes) {
 
-
+    
     let alias = 'users'
     let cols = {
         id: {

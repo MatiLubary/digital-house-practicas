@@ -24,14 +24,14 @@ module.exports = function (sequelize, dataTypes) {
     }
 
 let config = {
-    tableName : 'movies',
+    tableName : 'actors',
     timestamps: false
 }
 
-const pelicula = sequelize.define(alias, cols, config)
+const actor = sequelize.define(alias, cols, config)
 
 
 
-    return pelicula
+    return actor
 
 }
