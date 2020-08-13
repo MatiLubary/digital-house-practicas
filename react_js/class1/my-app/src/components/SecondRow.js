@@ -2,6 +2,17 @@ import React from 'react';
 import SecondRowItems from './SecondRowItems';
 
 function SecondRow() {
+
+	let categories = [
+		{id: 1, name: "uno"},
+		{id: 2, name: "dos"},
+		{id: 3, name: "tres"},
+		{id: 4, name: "cuatro"},
+		{id: 5, name: "cinco"},
+		{id: 6, name: "sies"}
+	]
+
+
     return (
 
         <div>
@@ -40,21 +51,7 @@ function SecondRow() {
 								<div className="card-body">
 									<div className="row">
 
-
-
-                                    <SecondRowItems />
-
-                                    <SecondRowItems />
-
-                                    <SecondRowItems />
-
-                                    <SecondRowItems />
-
-                                    <SecondRowItems />
-
-                                    <SecondRowItems />
-
-										
+									{ categories.map(category => <SecondRowItems key={category.id} data={category} />) }										
 
 
 

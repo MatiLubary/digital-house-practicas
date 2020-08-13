@@ -8,11 +8,11 @@ function FirstRow() {
                 <div className="row">
                 
                 
-                    <FirstRowItems title = "cosa loca A" price ="123" />
+                    <FirstRowItems color = "primary" icon = "clipboard-list" title = "Products in database" price ="123" />
 
-                    <FirstRowItems title = "cosa loca B" price ="456"/>
+                    <FirstRowItems color = "success" icon = "dollar-sign" title = "Amount in products" price ="$546.456"/>
 
-                    <FirstRowItems title = "cosa loca C" price ="789"/>
+                    <FirstRowItems color = "warning" icon = "user-check" title = "Users quantity" price ="38"/>
 
 
                 </div>
